@@ -80,6 +80,12 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Description" id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="eSg-hY-lvp" id="pVU-HF-UEu"/>
+                        <outlet property="dueDateTextField" destination="V4d-MJ-Gw6" id="oZs-2F-sWg"/>
+                        <outlet property="nameTextField" destination="fSP-Z9-MU7" id="Ewm-od-3GI"/>
+                        <outlet property="titleTextField" destination="gdi-IR-JMR" id="mj4-CH-Hbq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
