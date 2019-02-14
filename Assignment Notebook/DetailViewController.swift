@@ -14,7 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dueDateTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
-    var detailItem: Assignment? {
+    var detailItem: Assignmnet? {
         didSet {
             // Update the view.
             configureView()
@@ -30,9 +30,10 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let assignment = self.detailItem{
-            if titleTextField.text != nil {
+            if titleTextField != nil {
                 titleTextField.text = assignment.title
-                nameTextField.text = assignment.name
+                nameTextField.text = assignment.course
+                dueDateTextField.text = assignment.dueDate
                 descriptionTextField.text = assignment.description
                 
             }
@@ -43,7 +44,8 @@ class DetailViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         if let assignment = self.detailItem{
             assignment.title = titleTextField.text!
-            assignment.name = nameTextField.text!
+            assignment.course = nameTextField.text!
+            assignment.dueDate = dueDateTextField.text!
             assignment.description = descriptionTextField.text!
         }
     }
